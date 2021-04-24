@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Scooters</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <div class="row">
+        <div class="col-md-12 jumbotron text-center">
+          <h1>DC Scooters Dashboard</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <!-- <div class="well">
+            <h5></h5>
+            <select
+              id="selDataset"
+              onchange="optionChanged(this.value)"
+            ></select>
+          </div> -->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Map Menu</h3>
+            </div>
+            <div id="sample-metadata" class="panel-body">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" href="scooter.html" target="_blank">Scooters Map</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="scooter_heatmap.html" target="_blank">Scooters Heatmap</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="scooter_tracks.html" target="_blank">Scooter Tracks</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="trip.html" target="_blank">Scooter Trips</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="trip_by_company.html" target="_blank">Scooter Trips by Company</a>
+                </li>
+                
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div id="bar">
+            <table class="table table-striped" id="summary_table">
+  <thead>
+    <tr>
+      <th scope="col">--------------</th>
+      <th scope="col">Distance (meter)</th>
+      <th scope="col">Duration (mins)</th>
+      <th scope="col">Speed (meter per min)</th>
+            <th scope="col">Max Speed (meter per min)</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">count</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="bubble"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./static/js/trip_summary.js"></script>
+    <!-- <script src="./static/js/bonus.js"></script> -->
+    <!-- <script src="samples.json"></script> -->
+  </body>
+</html>
