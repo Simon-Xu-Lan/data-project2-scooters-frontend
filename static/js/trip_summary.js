@@ -56,3 +56,57 @@ d3.json('https://scooters.pythonanywhere.com/api/trips/summary').then(
     Plotly.newPlot('bubble', data2, layout2);
   }
 );
+
+d3.json('https://scooters.pythonanywhere.com/api/trips/trip-hours').then(
+  (data) => {
+    var trips = data.data.sort((a, b) => a.hour - b.hour);
+
+    // line chart 1
+    var trace1 = {
+      x: trips.map((row) => row.hour),
+      y: trips.map((row) => row.trip_count),
+      type: 'line',
+    };
+
+    var data1 = [trace1];
+    var layout1 = {
+      title: 'Trip Counts - Time',
+      xaxis: { title: 'DC Time' },
+      yaxis: { title: 'Trip Counts' },
+    };
+
+    Plotly.newPlot('line1', data1, layout1);
+
+    // Line chart 2
+    var trace2 = {
+      x: trips.map((row) => row.hour),
+      y: trips.map((row) => row.trip_distance_mile),
+      type: 'line',
+    };
+
+    var data2 = [trace2];
+    var layout2 = {
+      title: 'Trip Distance - Time',
+      xaxis: { title: 'DC Time' },
+      yaxis: { title: 'Trip Total Ditance (mile)' },
+    };
+
+    Plotly.newPlot('line2', data2, layout2);
+
+    // Line chart 2
+    var trace3 = {
+      x: trips.map((row) => row.hour),
+      y: trips.map((row) => row.trip_time_min),
+      type: 'line',
+    };
+
+    var data3 = [trace3];
+    var layout3 = {
+      title: 'Trip Time - Time',
+      xaxis: { title: 'DC Time' },
+      yaxis: { title: 'Trip Total Time (hours)' },
+    };
+
+    Plotly.newPlot('line3', data2, layout3);
+  }
+);
