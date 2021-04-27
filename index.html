@@ -20,13 +20,6 @@
       </div>
       <div class="row">
         <div class="col-md-3">
-          <!-- <div class="well">
-            <h5></h5>
-            <select
-              id="selDataset"
-              onchange="optionChanged(this.value)"
-            ></select>
-          </div> -->
           <div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title">Map Menu</h3>
@@ -57,49 +50,53 @@
         <div class="col-md-9">
           <div id="bar">
             <table class="table table-striped" id="summary_table">
-  <thead>
-    <tr>
-      <th scope="col">--------------</th>
-      <th scope="col">Distance (meter)</th>
-      <th scope="col">Duration (mins)</th>
-      <th scope="col">Speed (meter per min)</th>
-            <th scope="col">Max Speed (meter per min)</th>
+              <thead>
+                <tr>
+                  <th scope="col">--------------</th>
+                  <th scope="col">Distance (meter)</th>
+                  <th scope="col">Duration (mins)</th>
+                  <th scope="col">Speed (meter per min)</th>
+                        <th scope="col">Max Speed (meter per min)</th>
 
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">count</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">count</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
-        
+        </div>  
       </div>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
+          <div id="pie"></div>
+        </div>
+        <div class="col-md-6">
           <div id="bubble"></div>
         </div>
+
       </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
     <script src="./static/js/trip_summary.js"></script>
     <!-- <script src="./static/js/bonus.js"></script> -->
     <!-- <script src="samples.json"></script> -->
