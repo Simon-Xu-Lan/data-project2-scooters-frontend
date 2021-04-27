@@ -21,7 +21,7 @@ L.tileLayer(
   }
 ).addTo(myMap);
 
-var url = 'http://scooters.pythonanywhere.com/api/trips/recent_hours/1';
+var url = 'https://scooters.pythonanywhere.com/api/trips/recent_hours/1';
 
 d3.json(url, function (res) {
   console.log(res.data[0].coordinates);

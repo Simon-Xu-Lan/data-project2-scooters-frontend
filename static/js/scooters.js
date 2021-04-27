@@ -33,7 +33,7 @@ L.polygon(
   }
 ).addTo(myMap);
 
-var url = 'http://scooters.pythonanywhere.com/api/latest';
+var url = 'https://scooters.pythonanywhere.com/api/latest';
 
 d3.json(url, function (res) {
   console.log(res);
